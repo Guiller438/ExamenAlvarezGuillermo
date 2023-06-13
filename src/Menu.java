@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.util.ArrayList;
 
 public class Menu {
@@ -32,7 +33,7 @@ public class Menu {
         }
         return null;
     }
-    public void modificarPlato(Plato plato, String nombre, double precio, int calorias, int tiempoPreparacion){
+    public void modificarPlato(Plato plato, String nombre, int precio, int calorias, int tiempoPreparacion){
         plato.setNombre(nombre);
         plato.setPrecio(precio);
         plato.setCalorias(calorias);
@@ -42,6 +43,12 @@ public class Menu {
         return menu;
     }
 
+    public void imprimirMenu(JTextArea textArea){
+        textArea.setText("");
+        for (Plato plato : menu) {
+            textArea.append(plato.toString() + "\n");
+        }
+    }
     @Override
     public String toString() {
         return "Menu{" +

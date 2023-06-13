@@ -45,6 +45,7 @@ public class mainForm extends JFrame {
                 }else{
                     menu.agregarPlato(plato);
                     JOptionPane.showMessageDialog(null, "Plato ingresado correctamente");
+                    menu.imprimirMenu(textAIngresoPlatos);
                 }
             }
         });
@@ -52,6 +53,7 @@ public class mainForm extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 menu.datosPredefinidos();
+                menu.imprimirMenu(textAIngresoPlatos);
             }
         });
         buscarModifButton.addActionListener(new ActionListener() {
@@ -67,6 +69,9 @@ public class mainForm extends JFrame {
                         textoModifPrecio.setText(String.valueOf(menu.buscarPlato(textoModifNombre.getText()).getPrecio()));
                         textoModifPreparacion.setText(String.valueOf(menu.buscarPlato(textoModifNombre.getText()).getTiempoPreparacion()));
                         textoModifCalorias.setText(String.valueOf(menu.buscarPlato(textoModifNombre.getText()).getCalorias()));
+                        textoModifPrecio.setEditable(true);
+                        textoModifPreparacion.setEditable(true);
+                        textoModifCalorias.setEditable(true);
                     }
                 }
             }
@@ -146,6 +151,7 @@ public class mainForm extends JFrame {
                 }
             }
         });
+
     }
 
     //Get mainPanel

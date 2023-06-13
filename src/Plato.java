@@ -1,10 +1,10 @@
 public class Plato {
     private String nombre;
-    private double precio;
+    private int precio;
     private int calorias;
     private int tiempoPreparacion;
 
-    public Plato(String nombre, double precio, int calorias, int tiempoPreparacion) {
+    public Plato(String nombre, int precio, int calorias, int tiempoPreparacion) {
         this.nombre = nombre;
         this.precio = precio;
         this.calorias = calorias;
@@ -23,7 +23,7 @@ public class Plato {
         return precio;
     }
 
-    public void setPrecio(double precio) {
+    public void setPrecio(int precio) {
         this.precio = precio;
     }
 
